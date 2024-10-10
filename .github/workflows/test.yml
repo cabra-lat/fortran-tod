@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.1
-      - uses: myConsciousness/bluesky-post@v2
+      - uses: myConsciousness/bluesky-post@v5
         with:
           text: "Test post from Github Actions powered by 'myConsciousness/bluesky-post'."
           identifier: ${{ secrets.BLUESKY_IDENTIFIER }}
