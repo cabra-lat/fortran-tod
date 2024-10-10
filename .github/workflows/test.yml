@@ -10,6 +10,9 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  
+env:
+  INPUT_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
 
 jobs:
   post:
@@ -18,7 +21,6 @@ jobs:
       - uses: actions/checkout@v4.2.1
       - uses: myConsciousness/bluesky-post@v5
         with:
-          identifier: ${{ secrets.BLUESKY_IDENTIFIER }}
           password: ${{ secrets.BLUESKY_PASSWORD }}
-          text: "Test post from Github Actions powered by 'myConsciousness/bluesky-post'."
+          text: "Test post from Github Actions."
 
