@@ -11,18 +11,13 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  post:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Send Bluesky Post
-        uses: myConsciousness/bluesky-post@v5
+      - uses: myConsciousness/bluesky-post@v2
         with:
-          text: "Test post from Github Actions"
+          text: "Test post from Github Actions powered by 'myConsciousness/bluesky-post'."
           identifier: ${{ secrets.BLUESKY_IDENTIFIER }}
           password: ${{ secrets.BLUESKY_PASSWORD }}
+
